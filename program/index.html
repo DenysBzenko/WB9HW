@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Form</title>
+<style>
+    input:required:invalid, input:focus:invalid {
+        background-color: #FFCCCC;
+    }
+    input:required:valid {
+        background-color: #CCFFCC;
+    }
+    .error {
+        color: red;
+    }
+    .success {
+        color: green;
+    }
+</style>
+</head>
+<body>
+
+<form id="sampleForm">
+    <label for="text">Text Input:</label>
+    <input type="text" id="text" name="text" required><br><br>
+
+    <label for="num">Number Input:</label>
+    <input type="number" id="num" name="num" required><br><br>
+
+    <label for="range">Range Input:</label>
+    <input type="range" id="range" name="range" min="0" max="100" required><br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <div>
+        <span>Radio Buttons:</span><br>
+        <input type="radio" id="option1" name="radio" value="Option 1" required>
+        <label for="option1">Option 1</label><br>
+        <input type="radio" id="option2" name="radio" value="Option 2">
+        <label for="option2">Option 2</label><br><br>
+    </div>
+
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,}" required>
+    <small>Must contain at least one number, one uppercase and lowercase letter, one special character, and at least 8 or more characters</small><br><br>
+
+    <label for="pwd-repeat">Repeat Password:</label>
+    <input type="password" id="pwd-repeat" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<p id="error" class="error"></p>
+<p id="success" class="success"></p>
+
+<script href="script/index.js"></script>
+
+</body>
+</html>
