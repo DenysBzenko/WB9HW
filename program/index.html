@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sample Form</title>
-<link rel="stylesheet" href="style/index.css"> 
+<style>
+    input:required:invalid, input:focus:invalid {
+        background-color: #FFCCCC;
+    }
+    input:required:valid {
+        background-color: #CCFFCC;
+    }
+    .error {
+        color: red;
+    }
+    .success {
+        color: green;
+    }
+</style>
 </head>
 <body>
 
