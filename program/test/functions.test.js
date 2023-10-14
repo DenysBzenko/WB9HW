@@ -1,6 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
-const { getFactorial, multiply } = require('./functions'); // Імпортуємо функції з functions.js
+const { getFactorial, multiply } = require('./functions'); 
 
 describe('getFactorial Function', function() {
     
